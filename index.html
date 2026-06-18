@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Gerin & Tom</title>
+    
+    <!-- PANGGIL KUMPULAN FONT PREMIUM DARI GOOGLE FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Cinzel:wght@600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #202124;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 15px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .invitation-card {
+            background: #ffffff;
+            max-width: 400px;
+            width: 100%;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: center;
+            border: 1px solid #dadce0;
+        }
+
+        .cover-image {
+            width: 100%;
+            height: 230px;
+            background-image: url('foto.jpg'); /* LANGSUNG MEMBACA FOTO DI FOLDER KAMU */
+            background-size: cover;
+            background-position: center;
+            border-bottom: 1px solid #dadce0;
+        }
+
+        .content {
+            padding: 25px 20px;
+        }
+
+        .subtitle {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 12px;
+            color: #5f6368;
+            margin-bottom: 15px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .couple-names {
+            margin-bottom: 25px;
+        }
+
+        .bride-name, .groom-name {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #202124;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .ampersand {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 20px;
+            color: #5f6368;
+            margin: 5px 0;
+        }
+
+        .details-box, .wallet-box {
+            text-align: left;
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid #dadce0;
+        }
+
+        .detail-item {
+            margin-bottom: 15px;
+        }
+
+        .detail-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .detail-label, .wallet-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 11px;
+            text-transform: uppercase;
+            color: #5f6368;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 4px;
+            letter-spacing: 1px;
+        }
+
+        .font-cinzel {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            color: #1a73e8;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            color: #202124;
+            font-weight: 500;
+            line-height: 1.5;
+        }
+
+        .wallet-click-btn {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            padding: 12px 15px;
+            border-radius: 6px;
+            border: 1px solid #dadce0;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.1s;
+        }
+
+        .wallet-click-btn:active {
+            background: #f1f3f4;
+            transform: scale(0.98);
+        }
+
+        .wallet-click-btn:last-child {
+            margin-bottom: 0;
+        }
+
+        .wallet-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wallet-logo {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        .wallet-name {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 600;
+            color: #202124;
+        }
+
+        .click-hint {
+            font-size: 11px;
+            color: #1a73e8;
+            font-weight: 500;
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .btn {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            padding: 11px 15px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 13px;
+            text-align: center;
+            transition: background 0.2s;
+        }
+
+        .btn-maps {
+            background: #ffffff;
+            color: #1a73e8;
+            border: 1px solid #dadce0;
+        }
+
+        .btn-maps:hover {
+            background: #f8f9fa;
+        }
+
+        .btn-rsvp {
+            background: #1a73e8;
+            color: white;
+            border: 1px solid transparent;
+        }
+
+        .btn-rsvp:hover {
+            background: #1557b0;
+        }
+
+        .footer-note {
+            margin-top: 20px;
+            font-size: 11px;
+            color: #5f6368;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="invitation-card">
+        <!-- Area Foto Utama -->
+        <div class="cover-image"></div>
+
+        <div class="content">
+            <p class="subtitle">Undangan Pernikahan</p>
+
+            <div class="couple-names">
+                <div class="bride-name">Gerin Angelina Cintya Nauli Purba</div>
+                <div class="ampersand">dan</div>
+                <div class="groom-name">Tom Holland</div>
+            </div>
+
+            <!-- Detail Informasi Acara -->
+            <div class="details-box">
+                <div class="detail-item">
+                    <span class="detail-label">Tanggal</span>
+                    <span class="font-cinzel">SABTU, 20 JUNI 2026</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Waktu</span>
+                    <span class="font-cinzel">09.00 WIB - SELESAI</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Lokasi</span>
+                    <span class="font-montserrat">Perumahan Green Hill Gunung Walat, Blok D5 No. 16, Cibadak, Kab. Sukabumi, Jawa Barat 43351</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Dresscode</span>
+                    <span class="font-montserrat" style="font-weight: 600; color: #202124;">Formal Dresscode</span>
+                </div>
+            </div>
+
+            <!-- Bagian Amplop -->
+            <div class="wallet-box">
+                <span class="detail-label" style="margin-bottom: 12px; color: #1a73e8;">✨ Amplop Digital (Klik untuk Transfer Kado)</span>
+                
+                <!-- OVO BUTTON -->
+                <div class="wallet-click-btn" onclick="openWallet('OVO', 'ovo://', 'https://www.ovo.id/')">
+                    <div class="wallet-left">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5b14ea69a2772c83693fb424/1586749341498-8M7COV6O6UR1F6X149LI/OVO+LOGO.png" class="wallet-logo" alt="OVO">
+                        <span class="wallet-name">OVO (a.n Gerin Angelina)</span>
+                    </div>
+                    <span class="click-hint">Buka Aplikasi &raquo;</span>
+                </div>
+
+                <!-- SHOPEEPAY BUTTON -->
+                <div class="wallet-click-btn" onclick="openWallet('ShopeePay', 'shopeeid://', 'https://shopee.co.id/')">
+                    <div class="wallet-left">
+                        <img src="https://i.pinimg.com/736x/8a/a5/cb/8aa5cbed2d1f99c27945d8b7b69c4fae.jpg" class="wallet-logo" alt="ShopeePay">
+                        <span class="wallet-name">ShopeePay (a.n Gerin Angelina)</span>
+                    </div>
+                    <span class="click-hint">Buka Aplikasi &raquo;</span>
+                </div>
+
+                <!-- GOPAY BUTTON -->
+                <div class="wallet-click-btn" onclick="openWallet('GoPay', 'gojek://', 'https://www.gojek.com/gopay/')">
+                    <div class="wallet-left">
+                        <img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/gojek_gopay_logo_icon_169018.png" class="wallet-logo" alt="GoPay">
+                        <span class="wallet-name">GoPay (a.n Gerin Angelina)</span>
+                    </div>
+                    <span class="click-hint">Buka Aplikasi &raquo;</span>
+                </div>
+            </div>
+
+            <div class="button-group">
+                <a href="https://maps.google.com/?q=Perumahan+Green+Hill+Gunung+Walat+Cibadak+Sukabumi" class="btn btn-maps" target="_blank">Buka Google Maps</a>
+                <a href="https://wa.me/6281318053781?text=Halo%20Gerin!%20Aku%20pasti%20datang%20ke%20pernikahan%20kamu%20dan%20Tom%20Holland%20ya!%20Selamat!" class="btn btn-rsvp" target="_blank">Konfirmasi Kehadiran (RSVP)</a>
+            </div>
+
+            <p class="footer-note">Dibuat untuk keperluan informasi undangan.</p>
+        </div>
+    </div>
+
+    <script>
+        function openWallet(walletName, appScheme, webFallback) {
+            var targetNumber = "081318053781";
+            var tempInput = document.createElement("input");
+            tempInput.value = targetNumber;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand("copy");
+            document.body.removeChild(tempInput);
+            
+            alert("Nomor " + walletName + " sukses tersalin otomatis! Silakan langsung paste (tempel) saat aplikasi terbuka.");
+            
+            window.location.href = appScheme;
+            
+            setTimeout(function() {
+                window.open(webFallback, '_blank');
+            }, 1500);
+        }
+    </script>
+
+</body>
+</html>
